@@ -1,0 +1,17 @@
+#displayContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#calc {
+    padding: calc(0.75em + 0.5vw);
+    font-size: calc(1.75em + 0.5vw);
+    width: calc(10em + 0.5vw);
+    height: calc(1em + 0.5vw);
+    border: none;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    border-color: rgb(52, 176, 218);
+    text-align: right;
+}
