@@ -22,6 +22,11 @@ const Calculator = () => {
         clearTotal(); 
     }
 
+    // Event handler when the = key is pressed.
+    // Will take the existing array of characters and 
+    // will parse them into numbers and operands.
+    // Then for each operand, the correct calculations
+    // will be performed and will adjust the total.
     const handleTotal = () => {
         let index = 0;
         let numbers = [];
@@ -100,10 +105,11 @@ const Calculator = () => {
 
         clearCharacters();
         setChars([total]);
-
-        console.log("TOTAL: " + total);
     }
 
+    // Event handler for when a button on the keypad is pressed.
+    // For each button press, the value of that button will be stored
+    // in an array.
     const addChar = (char) => {
         if (char === "=") { 
             if(typeof(characters[characters.length - 1]) === 'string') {
@@ -131,7 +137,6 @@ const Calculator = () => {
         } else {
             setChars([...characters, parseFloat(char)]);
         };
-        console.log(characters);
     }
 
     const [btnClassName, setBtnClassname] = useState("btn");
