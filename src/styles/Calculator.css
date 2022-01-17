@@ -3,3 +3,32 @@
     flex-direction: row;
     justify-content: center;
 }
+
+#calculator {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition-timing-function: ease;
+    transition-duration: 0.5s;
+}
+
+#dkMode {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#dkModeLabel {
+    font-size: calc(0.75em + 0.5vw);
+    padding: calc(1em + 0.5vw)
+}
+
+.dark {
+    background-color: rgb(41, 41, 41);
+    color: rgb(52, 176, 218);
+    transition-timing-function: ease;
+    transition-duration: 0.5s;
+}

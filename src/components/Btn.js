@@ -1,4 +1,5 @@
 import React from 'react'
+import '../styles/Btn.css'
 
 const Button = (props) => {
     const handleClick = () => {

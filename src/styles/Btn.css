@@ -1,4 +1,4 @@
-.keyPadBtn {
+.btn {
     border: none;
     border-radius: 0;
     padding: calc(0.75em + 0.5vw);
@@ -10,8 +10,17 @@
     width: calc(2.25em + 0.5vw);
 }
 
-.keyPadBtn:hover {
+.btn:hover {
     background-color: rgb(52, 176, 218);
     transition-timing-function: ease;
     transition-duration: 0.5s;
+}
+
+.darkMode {
+    background-color: rgb(41, 41, 41);
+    color: rgb(52, 176, 218);
+}
+
+.darkMode:hover{
+    background-color: rgb(95, 95, 95);
 }

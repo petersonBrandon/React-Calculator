@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import CalcOperators from './CalcOperators'
 import Display from './Display'
 import Keypad from './Keypad'
+import Toggle from './Toggle'
 import '../styles/Calculator.css'
 
 const Calculator = () => {
@@ -133,13 +134,30 @@ const Calculator = () => {
         console.log(characters);
     }
 
+    const [btnClassName, setBtnClassname] = useState("btn");
+    const [genClassName, setGenClassname] = useState("light");
+
+    const toggleDarkMode = (darkMode) => {
+        if (darkMode) {
+            setBtnClassname("btn darkMode");
+            setGenClassname("dark");
+        } else {
+            setBtnClassname("btn");
+            setGenClassname("light");
+        }
+    }
+
     return (
-        <div>
+        <div id="calculator" className={genClassName}>
             <Display chars={characters} />
             <div id="calcPad">
-                <Keypad addChar={addChar} />
-                <CalcOperators addChar={addChar} />
-            </div>          
+                <Keypad className={btnClassName} addChar={addChar} />
+                <CalcOperators className={btnClassName} addChar={addChar} />
+            </div>
+            <div id="dkMode">
+                <label id="dkModeLabel">DARK MODE</label>
+                <Toggle toggleDarkMode={toggleDarkMode} /> 
+            </div>       
         </div>
     )
 }
